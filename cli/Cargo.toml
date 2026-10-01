@@ -1,0 +1,15 @@
+[package]
+name = "vesting-cli"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "vesting-cli"
+path = "src/main.rs"
+
+[dependencies]
+solana-token-vesting = { path = "../programs/solana-token-vesting", features = ["no-entrypoint"] }
+anchor-client = "0.32.1"
+anchor-spl = { version = "0.32.1", features = ["token", "associated_token"] }
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
